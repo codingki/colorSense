@@ -207,7 +207,13 @@ export default function App() {
 	function win() {
 		setScore(score + 1);
 	}
-
+	function desktop() {
+		if (width > 800) {
+			return true;
+		} else {
+			return false;
+		}
+	}
 	function Box() {
 		let boxes = [];
 
@@ -224,8 +230,12 @@ export default function App() {
 						<Animated.View
 							style={{
 								backgroundColor: wrongColor,
-								width: width / level[currentLevel].width,
-								height: width / level[currentLevel].width,
+								width: desktop()
+									? 600 / level[currentLevel].width
+									: width / level[currentLevel].width,
+								height: desktop()
+									? 600 / level[currentLevel].width
+									: width / level[currentLevel].width,
 								transform: [{ scale: bounce }],
 							}}
 						></Animated.View>
@@ -242,8 +252,12 @@ export default function App() {
 						<Animated.View
 							style={{
 								backgroundColor: color,
-								width: width / level[currentLevel].width,
-								height: width / level[currentLevel].width,
+								width: desktop()
+									? 600 / level[currentLevel].width
+									: width / level[currentLevel].width,
+								height: desktop()
+									? 600 / level[currentLevel].width
+									: width / level[currentLevel].width,
 								transform: [{ scale: bounce }],
 							}}
 						></Animated.View>
@@ -370,7 +384,7 @@ export default function App() {
 			<View
 				style={{
 					flex: 3,
-
+					width: width > 800 && 600,
 					justifyContent: 'center',
 					alignItems: 'center',
 				}}
