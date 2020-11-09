@@ -1,0 +1,35 @@
+{
+  "background_color": "#C1272D",
+  "description": "Game that test your color sensitivity to the limit",
+  "display": "standalone",
+  "lang": "en",
+  "name": "Color Sense",
+  "short_name": "Color Sense",
+  "start_url": "/?utm_source=web_app_manifest",
+  "orientation": "portrait",
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "http://play.google.com/store/apps/details?id=com.essence.colorsense",
+      "id": "com.essence.colorsense"
+    }
+  ],
+  "prefer_related_applications": true,
+  "icons": [
+    {
+      "src": "\\pwa\\chrome-icon\\chrome-icon-144.png",
+      "sizes": "144x144",
+      "type": "image/png"
+    },
+    {
+      "src": "\\pwa\\chrome-icon\\chrome-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "\\pwa\\chrome-icon\\chrome-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
